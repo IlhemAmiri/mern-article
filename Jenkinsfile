@@ -16,6 +16,13 @@ pipeline {
                     credentialsId: 'github'
             }
         }
+        stage('Verify Docker Access') {
+                steps {
+                    script {
+                        sh 'docker info'
+                    }
+                }
+            }
         stage('Build Server Image') {
             steps {
                 dir('backend-article') {
