@@ -22,7 +22,7 @@ pipeline {
                     script {
                         sh 'pwd'
                         sh 'ls -la'
-                        dockerImageServer = docker.build("${IMAGE_NAME_SERVER}", "--no-cache .")
+                        dockerImageServer = docker.build("${IMAGE_NAME_SERVER}")
                     }
                 }
             }
