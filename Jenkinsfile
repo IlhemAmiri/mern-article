@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Build Server Image') {
             steps {
-                dir('backend') {
+                dir('backend-article') {
                     script {
                         dockerImageServer = docker.build("${IMAGE_NAME_SERVER}")
                     }
@@ -27,7 +27,7 @@ pipeline {
         }
         stage('Build Client Image') {
             steps {
-                dir('frontend') {
+                dir('frontend-article') {
                     script {
                         dockerImageClient = docker.build("${IMAGE_NAME_CLIENT}")
                     }
