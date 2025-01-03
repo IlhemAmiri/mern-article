@@ -1,0 +1,32 @@
+services:
+  mongodb-article:
+    image: mongo
+    container_name: mongodb-article
+    networks:
+      - mern-network
+    ports:
+      - "27017:27017"
+
+  backend-article:
+    build: ./backend
+    container_name: backend-article
+    ports:
+      - "3001:3001"
+    networks:
+      - mern-network
+    depends_on:
+      - mongodb-article
+
+  frontend-article:
+    build: ./frontend
+    container_name: frontend-article
+    ports:
+      - "3000:3000"
+    networks:
+      - mern-network
+    depends_on:
+      - backend-article
+
+networks:
+  mern-network:
+    driver: bridge
