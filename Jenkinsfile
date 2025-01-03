@@ -20,6 +20,8 @@ pipeline {
             steps {
                 dir('backend-article') {
                     script {
+                        sh 'pwd'
+                        sh 'ls -la'
                         dockerImageServer = docker.build("${IMAGE_NAME_SERVER}", "--no-cache .")
                     }
                 }
