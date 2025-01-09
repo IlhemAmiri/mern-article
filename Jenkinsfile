@@ -5,8 +5,8 @@ pipeline {
     }
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub')
-        IMAGE_NAME_SERVER = 'ilhemamirii/backend'
-        IMAGE_NAME_CLIENT = 'ilhemamirii/frontend'
+        IMAGE_NAME_SERVER = 'ilhemamirii/backend-article:latest'
+        IMAGE_NAME_CLIENT = 'ilhemamirii/frontend-article:latest'
     }
     stages {
         stage('Checkout') {
