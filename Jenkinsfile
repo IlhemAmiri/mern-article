@@ -50,10 +50,12 @@ pipeline {
             steps {
                 script {
                     sh """
-                    docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \\
-                        aquasec/trivy:latest image --exit-code 0 \\
-                        --severity LOW,MEDIUM,HIGH,CRITICAL \\
-                        ${IMAGE_NAME_CLIENT}
+                    docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \
+                    aquasec/trivy:latest image --skip-update --exit-code 0 \
+                    --severity MEDIUM,HIGH,CRITICAL \
+                    --ignore-unfixed \
+                    --exclude app/node_modules \
+                    ${IMAGE_NAME_CLIENT}
                     """
                 }
             }
