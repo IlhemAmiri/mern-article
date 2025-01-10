@@ -63,7 +63,7 @@ pipeline {
         stage('Push Images to Docker Hub') {
             steps {
                 script {
-                    docker.withRegistry('', 'dockerhub') {
+                    docker.withRegistry('', "${DOCKERHUB_CREDENTIALS}") {
                         dockerImageServer.push('latest')
                         dockerImageClient.push('latest')
                     }
