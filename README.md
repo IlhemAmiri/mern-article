@@ -26,4 +26,3 @@
 ![Capture d’écran (754)](https://github.com/user-attachments/assets/b22a3480-3f3d-4e1c-a56e-33451e753464)
 ![Capture d’écran (756)](https://github.com/user-attachments/assets/425a4521-8914-4eaf-bb6c-c51a233cf029)
 ![Capture d’écran (757)](https://github.com/user-attachments/assets/9d3e1676-fd47-4918-b749-086cd59718a8)
-![Capture d'écran 2025-01-13 214801](https://github.com/user-attachments/assets/254a90b4-f35a-4c1f-8567-efcdb1c659ad)
